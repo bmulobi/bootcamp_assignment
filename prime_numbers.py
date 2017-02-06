@@ -28,6 +28,10 @@ def prime_numbers_generator(n):
     # reject tuple inputs   
     if type(n) is tuple:
         return "Tuple inputs are not allowed"
+    
+    # reject float inputs   
+    if type(n) is float:
+        return "Floats are not allowed"
         
     i = 2
     while(i < n):
