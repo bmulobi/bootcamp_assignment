@@ -11,6 +11,10 @@ def prime_numbers_generator(n):
      # reject negative numbers   
     if type(n) == int and n < 0:
         return "Negative numbers are not allowed"
+    
+      # reject dictionary inputs   
+    if type(n) is dict:
+        return "Dictionary inputs are not allowed"
         
     i = 2
     while(i < n):
