@@ -15,6 +15,15 @@ def prime_numbers_generator(n):
       # reject dictionary inputs   
     if type(n) is dict:
         return "Dictionary inputs are not allowed"
+    
+    # reject list inputs   
+    if type(n) is list:
+        return "List inputs are not allowed"
+        
+        
+    # reject tuple inputs   
+    if type(n) is tuple:
+        return "Tuple inputs are not allowed"
         
     i = 2
     while(i < n):
