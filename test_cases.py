@@ -39,7 +39,11 @@ class ten_test_cases(unittest.TestCase):
         
     # return false if n is 1
     def test_false_if_one(self):
-        self.assertFalse(prime_numbers_generator(1))     
+        self.assertFalse(prime_numbers_generator(1)) 
+        
+    # test for float inputs
+    def test_no_floats(self):
+        self.assertEqual(prime_numbers_generator(99.999),"Floats are not allowed")     
             
             
 if __name__ == '__main__':      
