@@ -1,6 +1,6 @@
 import unittest
 
-from prime_numbers import prime_numbers_generator
+from prime_numbers import prime_numbers_generator,prime_output_checker
 
 
 class ten_test_cases(unittest.TestCase):
@@ -19,6 +19,10 @@ class ten_test_cases(unittest.TestCase):
     # reject negative numbers    
     def test_no_negative_numbers(self):
         self.assertEqual(prime_numbers_generator(-20),"Negative numbers are not allowed")     
+        
+    # reject dictionary inputs
+    def test_no_dictionaries_allowed(self):
+        self.assertEqual(prime_numbers_generator({'a':1}),"Dictionary inputs are not allowed")     
             
             
 if __name__ == '__main__':      
