@@ -14,7 +14,11 @@ class ten_test_cases(unittest.TestCase):
         
    # test output has prime numbers only    
     def test_output_is_prime_only(self):
-        self.assertTrue(prime_output_checker(prime_numbers_generator(100)))     
+        self.assertTrue(prime_output_checker(prime_numbers_generator(100)))   
+        
+    # reject negative numbers    
+    def test_no_negative_numbers(self):
+        self.assertEqual(prime_numbers_generator(-20),"Negative numbers are not allowed")     
             
             
 if __name__ == '__main__':      
