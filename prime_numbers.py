@@ -4,6 +4,10 @@ def prime_numbers_generator(n):
     
     primes_list = []
     
+    # return false if n is 0 or 1
+    if type(n) == int and n == 0 or n ==1:
+        return False
+    
     # reject string arguments
     if type(n) == str:
         return "String arguments are not allowed"

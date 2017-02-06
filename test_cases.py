@@ -31,7 +31,15 @@ class ten_test_cases(unittest.TestCase):
         
      # reject tuple inputs
     def test_no_tuples_allowed(self):
-        self.assertEqual(prime_numbers_generator((2,5,1,6)),"Tuple inputs are not allowed")      
+        self.assertEqual(prime_numbers_generator((2,5,1,6)),"Tuple inputs are not allowed")    
+        
+      # return false if n is 0
+    def test_false_if_zero(self):
+        self.assertFalse(prime_numbers_generator(0))        
+        
+    # return false if n is 1
+    def test_false_if_one(self):
+        self.assertFalse(prime_numbers_generator(1))     
             
             
 if __name__ == '__main__':      
