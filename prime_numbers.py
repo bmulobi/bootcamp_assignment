@@ -7,6 +7,10 @@ def prime_numbers_generator(n):
     # reject string arguments
     if type(n) == str:
         return "String arguments are not allowed"
+    
+     # reject negative numbers   
+    if type(n) == int and n < 0:
+        return "Negative numbers are not allowed"
         
     i = 2
     while(i < n):
@@ -23,6 +27,11 @@ def prime_numbers_generator(n):
             primes_list.append(i)
             
         i = i + 1
+        
+        
+        
+        
+        
         
 def prime_output_checker(alist):
 
