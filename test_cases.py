@@ -22,7 +22,16 @@ class ten_test_cases(unittest.TestCase):
         
     # reject dictionary inputs
     def test_no_dictionaries_allowed(self):
-        self.assertEqual(prime_numbers_generator({'a':1}),"Dictionary inputs are not allowed")     
+        self.assertEqual(prime_numbers_generator({'a':1}),"Dictionary inputs are not allowed")   
+        
+   # reject list inputs
+    def test_no_lists_allowed(self):
+        self.assertEqual(prime_numbers_generator([1,2,7]),"List inputs are not allowed")    
+        
+        
+     # reject tuple inputs
+    def test_no_tuples_allowed(self):
+        self.assertEqual(prime_numbers_generator((2,5,1,6)),"Tuple inputs are not allowed")      
             
             
 if __name__ == '__main__':      
