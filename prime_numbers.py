@@ -24,4 +24,13 @@ def prime_numbers_generator(n):
             
         i = i + 1
         
-      
+def prime_output_checker(alist):
+
+    """function returns true if output of prime_numbers_generator
+       is prime numbers only"""
+    
+    for num in alist:
+        if(num > 2):
+            if num % 2 == 0:
+                return False
+    return True 
