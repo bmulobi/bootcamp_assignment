@@ -1,5 +1,6 @@
 import unittest
 
+
 from prime_numbers import prime_numbers_generator,prime_output_checker
 
 
@@ -43,7 +44,12 @@ class ten_test_cases(unittest.TestCase):
         
     # test for float inputs
     def test_no_floats(self):
-        self.assertEqual(prime_numbers_generator(99.999),"Floats are not allowed")     
+        self.assertEqual(prime_numbers_generator(99.999),"Floats are not allowed")  
+        
+        
+    # test for overflow
+    def test_no_overflow(self):
+        self.assertEqual(prime_numbers_generator(999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999),"Overflow")     
             
             
 if __name__ == '__main__':      
