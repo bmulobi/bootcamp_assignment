@@ -1,5 +1,6 @@
 import sys
 
+# The function has a growth rate of O(n2) as a result of the two nested while loops
 
 def prime_numbers_generator(n):
     """ Function takes an integer argument n and populates a list with 
