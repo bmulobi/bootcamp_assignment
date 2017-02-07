@@ -1,3 +1,6 @@
+import sys
+
+
 def prime_numbers_generator(n):
     """ Function takes an integer argument n and populates a list with 
     prime numbers from 0 to n """   
@@ -32,6 +35,10 @@ def prime_numbers_generator(n):
     # reject float inputs   
     if type(n) is float:
         return "Floats are not allowed"
+    
+    # no excessive sizes
+    if n > sys.maxsize:
+        return "Overflow" 
         
     i = 2
     while(i < n):
